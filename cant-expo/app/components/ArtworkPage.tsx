@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs, A11y } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -32,43 +31,21 @@ export default function ArtworkPage({
   artworks,
   initialIndex = 0,
 }: ArtworkPageProps) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
   const [noteOpen, setNoteOpen] = useState(false);
 
-  const initialActiveIndex = useMemo(() => {
-    const artworkParam = searchParams.get("artwork");
-    if (!artworkParam) return initialIndex;
-
-    const foundIndex = artworks.findIndex(
-      (aw) => String(aw.id) === artworkParam
-    );
-
-    return foundIndex >= 0 ? foundIndex : initialIndex;
-  }, [searchParams, artworks, initialIndex]);
-
-  const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
-
   useEffect(() => {
-    setActiveIndex(initialActiveIndex);
-  }, [initialActiveIndex]);
+    setActiveIndex(initialIndex);
+    setNoteOpen(false);
+  }, [initialIndex]);
 
   if (!artworks.length) return null;
 
-  const artwork = artworks[activeIndex] ?? artworks[0];
+  const safeIndex =
+    activeIndex >= 0 && activeIndex < artworks.length ? activeIndex : 0;
 
-  const updateUrl = (index: number) => {
-    const selectedArtwork = artworks[index];
-    if (!selectedArtwork) return;
-
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("artwork", String(selectedArtwork.id));
-
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-  };
+  const artwork = artworks[safeIndex];
 
   return (
     <main className={styles.page}>
@@ -80,12 +57,10 @@ export default function ArtworkPage({
           swiper:
             thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
-        initialSlide={initialActiveIndex}
+        initialSlide={initialIndex}
         onSlideChange={(swiper) => {
-          const nextIndex = swiper.activeIndex;
-          setActiveIndex(nextIndex);
+          setActiveIndex(swiper.activeIndex);
           setNoteOpen(false);
-          updateUrl(nextIndex);
         }}
         className={styles.mainSwiper}
         a11y={{ enabled: true }}
@@ -108,8 +83,9 @@ export default function ArtworkPage({
         <h1 className={styles.title}>{artwork.title}</h1>
         <p className={styles.description}>{artwork.description}</p>
         <p className={styles.translation}>{artwork.translation}</p>
+
         <div className={styles.authorNote}>
-        <button
+          <button
             type="button"
             className={styles.authorNoteToggle}
             onClick={() => setNoteOpen((v) => !v)}
