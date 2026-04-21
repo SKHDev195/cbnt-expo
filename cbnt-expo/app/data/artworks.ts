@@ -4,7 +4,7 @@ export const artworks: Artwork[] = [
   {
     id: 1,
     imageUrl: "/images/saint.webp",
-    title: "ST. TRAUMA",
+    title: "1. ST. TRAUMA",
     description: "The shame, the repressed memories, the victim blaming.",
     authorNote: "I am in this picture and I do not like it.",
     spotifyTrackId: "6OLLrQfvU66LY4dUagqnJX",
@@ -13,7 +13,7 @@ export const artworks: Artwork[] = [
   {
     id: 2,
     imageUrl: "/images/dead.webp",
-    title: "DEAD INSIDE",
+    title: "2. DEAD INSIDE",
     description: "Being happy is a choice.",
     authorNote: "An artist creates not out of suffering but out of love.",
     spotifyTrackId: "51KMpn0p5Vb7XVdV7mWau5",
@@ -22,7 +22,7 @@ export const artworks: Artwork[] = [
   {
     id: 3,
     imageUrl: "/images/grief.webp",
-    title: "GOOD GRIEF",
+    title: "3. GOOD GRIEF",
     description: "Grief is the only constant force in our lives.",
     authorNote: "She stalked me for two months and wanted to 'take over' my favourite places and hobbies.",
     spotifyTrackId: "0AJhcuRl3i1FfPNr88ZScv",
@@ -31,7 +31,7 @@ export const artworks: Artwork[] = [
   {
     id: 4,
     imageUrl: "/images/games.webp",
-    title: "PLAYING GAMES",
+    title: "4. PLAYING GAMES",
     description: "Stop playing their games.",
     authorNote: "The autism diagnosis was more of a relief than anything.",
     spotifyTrackId: "531QnUrqLZgsPtEc2nOxQk",
@@ -40,7 +40,7 @@ export const artworks: Artwork[] = [
   {
     id: 5,
     imageUrl: "/images/inflammation.webp",
-    title: "EAR/DRUM",
+    title: "5. EAR/DRUM",
     description: "Ah, that sticky and oily feeling of isolation and betrayal.",
     authorNote: "I had double otitis that summer.",
     spotifyTrackId: "0AJhcuRl3i1FfPNr88ZScv",
@@ -49,7 +49,7 @@ export const artworks: Artwork[] = [
   {
     id: 6,
     imageUrl: "/images/fire.webp",
-    title: "FIREBREAK",
+    title: "6. FIREBREAK",
     description: "This is the year of death.",
     authorNote: "I woke up at 4AM to see if the fire reached me and my cat.",
     spotifyTrackId: "4ZcuHQLXRsOyNfprXVCABm",
@@ -58,7 +58,7 @@ export const artworks: Artwork[] = [
   {
     id: 7,
     imageUrl: "/images/kiss.webp",
-    title: "THE KISS",
+    title: "7. THE KISS",
     description: "Miraculously, she's back.",
     authorNote: "She told me she loved me.",
     spotifyTrackId: "5XhMgAWzou6EjDmQtoyoZE",
@@ -67,7 +67,7 @@ export const artworks: Artwork[] = [
   {
     id: 8,
     imageUrl: "/images/love.webp",
-    title: "COMING ALIVE",
+    title: "8. COMING ALIVE",
     description: "Some embraces are more meaningful than others.",
     authorNote: "She lied.",
     spotifyTrackId: "286mFeYjBJ9fkioaIzaxoN",
@@ -76,7 +76,7 @@ export const artworks: Artwork[] = [
   {
     id: 9,
     imageUrl: "/images/innocence.webp",
-    title: "PREMONITION",
+    title: "9. PREMONITION",
     description: "You saw it and yet you did not react.",
     authorNote: "Three days before disaster.",
     spotifyTrackId: "5SkUTkCHEByB7QJ6PF8QL4",
@@ -85,16 +85,16 @@ export const artworks: Artwork[] = [
   {
     id: 10,
     imageUrl: "/images/abuse.webp",
-    title: "CRY BETTER NEXT TIME",
+    title: "10. CRY BETTER NEXT TIME",
     description: "An eye is stronger than you think.",
-    authorNote: "It was just a Christmas decoration.",
-    spotifyTrackId: "2nlivHG7sBn9C22SBhzuQp",
+    authorNote: "It was just a Christmas decoration, not a real eye.",
+    spotifyTrackId: "71xN6jcoFqIEhAChTyHgLu",
     translation: "Yojijukugo: personal attack.",
   },
   {
     id: 11,
     imageUrl: "/images/strength.webp",
-    title: "POUR YOUR MISERY DOWN ON ME",
+    title: "11. POUR YOUR MISERY DOWN ON ME",
     description: "People keep saying I have a strong back.",
     authorNote: "I hate it when people keep saying I have a strong back.",
     spotifyTrackId: "23Llyuevgg4Dt5vNdZcEEf",
@@ -103,7 +103,7 @@ export const artworks: Artwork[] = [
   {
     id: 12,
     imageUrl: "/images/darkness.webp",
-    title: "TRUE DARKNESS",
+    title: "12. TRUE DARKNESS",
     description: "The idea for this exhibition was once entirely different.",
     authorNote: "She died.",
     spotifyTrackId: "5UfHkQ5bUY4pTxwlCFJNUK",
@@ -112,7 +112,7 @@ export const artworks: Artwork[] = [
   {
     id: 13,
     imageUrl: "/images/bubble.webp",
-    title: "CRYING LIGHTNING",
+    title: "13. CRYING LIGHTNING",
     description: "Please pop the balloon already.",
     authorNote: "The person in this picture does not exist.",
     spotifyTrackId: "6wVWJl64yoTzU27EI8ep20",
@@ -121,7 +121,7 @@ export const artworks: Artwork[] = [
   {
     id: 14,
     imageUrl: "/images/fingers.webp",
-    title: "THE ACT OF LETTING GO",
+    title: "14. THE ACT OF LETTING GO",
     description: "Healing oneself is a violent act.",
     authorNote: "I'll gladly bite down on these fingers.",
     spotifyTrackId: "4GKJALTXTwhZgLPp0usd5C",
@@ -130,7 +130,7 @@ export const artworks: Artwork[] = [
   {
     id: 15,
     imageUrl: "/images/monaxia.webp",
-    title: "Η ΜΟΝΑΞΙΑ ΜΟΥ",
+    title: "15. Η ΜΟΝΑΞΙΑ ΜΟΥ",
     description: "One kiss is all it takes.",
     authorNote: "To God, our hearts are nothing more than toys in the palm of her hand.",
     spotifyTrackId: "3ZJ8kVeneLZQP6QSSu5aXu",
